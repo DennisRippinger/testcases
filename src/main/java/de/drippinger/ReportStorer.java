@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class ReportStorer {
 
-    public void writeReportTo(File file, List<BusinessValues> values) {
+        public void writeReportTo(File file, List<BusinessValues> values) {
 
         try (PrintWriter pw = new PrintWriter(file)) {
             StringBuilder sb = new StringBuilder();

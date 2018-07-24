@@ -9,13 +9,14 @@ import java.time.ZonedDateTime;
  */
 public class TimeRepository {
 
-    public void storeTime(ZonedDateTime dateTime) {
+    public String storeTime(ZonedDateTime dateTime) {
 
         try {
             Thread.sleep(50);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        return "1";
     }
 
 }

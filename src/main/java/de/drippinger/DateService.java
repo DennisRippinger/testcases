@@ -2,6 +2,7 @@ package de.drippinger;
 
 import de.drippinger.repository.TimeRepository;
 
+import javax.inject.Inject;
 import java.time.ZonedDateTime;
 
 import static java.time.ZonedDateTime.now;
@@ -16,14 +17,15 @@ import static java.time.ZonedDateTime.now;
  */
 public class DateService {
 
-    private TimeRepository repository = new TimeRepository();
+    @Inject
+    private TimeRepository repository;
 
     public ZonedDateTime calculateDateBasedOn() {
         ZonedDateTime result = now();
 
         // Do other fancy stuff.
         // Like store the value!
-        repository.storeTime(result);
+        String id = repository.storeTime(result);
 
         return result;
     }

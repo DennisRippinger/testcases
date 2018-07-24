@@ -22,8 +22,8 @@ public class TimeBasedSwitcherTest {
         return Arrays.asList(new Object[][]{
                 {now(), "Just Now"},
                 {now().plusSeconds(2), "Just Now"},
-                {now().plusMinutes(1), "Just Recently"},
-                {now().plusMinutes(2), "Near Past"},
+                {now().plusMinutes(2), "Just Recently"},
+                {now().plusMinutes(3), "Near Past"},
                 {now().plusMinutes(20), "Old"}
         });
     }
